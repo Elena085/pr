@@ -80,3 +80,21 @@ int* solution(void(*input_matrix)(int(*)[5], int, int)) {
 #undef N 
 #undef M 
 }
+int main()
+{
+	int choice = 0;
+	std::cout << "Enter 0 to input from console or enter 1 to input from \"input.txt\"\n";
+	std::cin >> choice;
+	switch (choice)
+	{
+	case 0:
+		solution(input_matrixc);
+		break;
+	case 1:
+		solution(input_matrixf);
+		break;
+	default:
+		std::cout << "Was entered wrong number\n";
+		break;
+	}
+}
